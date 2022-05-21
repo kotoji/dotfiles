@@ -18,6 +18,6 @@ $ ./install.sh
 ユーザー設定はここに書く。
 
 ### SpaceVim
-
+SpaceVim は別途導入する必要がある、念の為。
 
 ### IntelliJ IDEA
