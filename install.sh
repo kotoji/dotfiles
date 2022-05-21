@@ -42,7 +42,12 @@ function install_ideavimrc() {
   create_symlink "$PWD/.ideavimrc" "$HOME/.ideavimrc"
 }
 
+function install_vimrc() {
+  create_symlink "$PWD/.vimrc" "$HOME/.vimrc"
+}
+
 install_fish
 install_git
 install_spacevim
 install_ideavimrc
+install_vimrc

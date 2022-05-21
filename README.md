@@ -1,4 +1,5 @@
 ## dotfiles
+`.ssh/config` は管理しない (怖いので)
 
 ## 使い方
 以下のコマンドでシンボリックリンクを作成する
@@ -18,6 +19,11 @@ $ ./install.sh
 ユーザー設定はここに書く。
 
 ### SpaceVim
-SpaceVim は別途導入する必要がある、念の為。
+NeoVim で使う (vim では使わない)。
+SpaceVim 自体は別途導入する必要がある、念の為。
 
 ### IntelliJ IDEA
+
+
+### vim
+vim は NeoVim w/ SpaceVim を使いたくないとき用。

@@ -7,6 +7,8 @@ alias lt='ls -tree'
 alias ...='../..'
 alias ....='../../..'
 
+# vim
+alias vi='vim'
 # neovim
 alias vim='nvim'
 
