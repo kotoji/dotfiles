@@ -35,6 +35,17 @@ function install_git() {
   fi
 }
 
+function install_spacevim() {
+  spacevimd="$HOME/.SpaceVim.d"
+
+  # 設定ファイルを symlink
+  if [ ! -e "$spacevimd" ]; then
+    ln -sv "$PWD/.SpaceVim.d" "$spacevimd"
+  else
+    echo "$spacevimd already exists"
+  fi
+}
 
 install_fish
 install_git
+install_spacevim
