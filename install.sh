@@ -24,5 +24,17 @@ function install_fish() {
   fi
 }
 
-install_fish
+function install_git() {
+  gitd="$HOME/.config/git"
 
+  # 設定ファイルを symlink
+  if [ ! -e "$gitd" ]; then
+    ln -sv "$PWD/.config/git" "$gitd"
+  else
+    echo "$gitd already exists"
+  fi
+}
+
+
+install_fish
+install_git

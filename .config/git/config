@@ -1,0 +1,29 @@
+[include]
+  # user
+  path = ~/.config/git/config.user
+[commit]
+  gpgsign = false
+[core]
+  ignorecase = false
+  excludesfile = ~/.config/git/ignore
+[init]
+  defaultBranch = main
+[pull]
+  ff = true
+  rebase = true
+[push]
+  default = upstream
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[alias]
+  push-f = push --force-with-lease
+  graph = log --oneline --graph
+  graph-b = log --graph --simplify-by-decoration --pretty=format:'%d' --all
+  log-s = log --pretty='format:%h %s'
+  diff-w = diff --word-diff
+  diff-f = diff --name-only
+  diff-s = diff --cached
+  conflicts = diff --name-only --diff-filter=U
