@@ -4,48 +4,45 @@ set -u
 
 HOSTNAME=$(hostname)
 
-function install_fish() {
-  fishd="$HOME/.config/fish"
+function create_symlink() {
+  src=$1
+  dst=$2
 
-  # 設定ファイルを symlink
-  if [ ! -e "$fishd" ]; then
-    ln -sv "$PWD/.config/fish" "$fishd"
+  if [ ! -e $dst ]; then
+    ln -sv "$src" "$dst"
   else
-    echo "$fishd already exists"
+    echo "$dst already exists!"
   fi
+}
+
+function install_fish() {
+  dst="$HOME/.config/fish"
+
+  create_symlink "$PWD/.config/fish" "$dst"
 
   # env.fish はホストごとに設定を用意する
-  env_template="$fishd/conf.d/template/env.fish.$HOSTNAME"
+  env_template="$dst/conf.d/template/env.fish.$HOSTNAME"
   if [ ! -e "$env_template" ]; then
     touch "$env_template"
   fi
-  if [ ! -e "$fishd/conf.d/env.fish" ]; then
-    ln -sv "$env_template" "$fishd/conf.d/env.fish"
+  if [ ! -e "$dst/conf.d/env.fish" ]; then
+    ln -sv "$env_template" "$dst/conf.d/env.fish"
   fi
 }
 
 function install_git() {
-  gitd="$HOME/.config/git"
-
-  # 設定ファイルを symlink
-  if [ ! -e "$gitd" ]; then
-    ln -sv "$PWD/.config/git" "$gitd"
-  else
-    echo "$gitd already exists"
-  fi
+  create_symlink "$PWD/.config/git" "$HOME/.config/git"
 }
 
 function install_spacevim() {
-  spacevimd="$HOME/.SpaceVim.d"
+  create_symlink "$PWD/.SpaceVim.d" "$HOME/.SpaceVim.d"
+}
 
-  # 設定ファイルを symlink
-  if [ ! -e "$spacevimd" ]; then
-    ln -sv "$PWD/.SpaceVim.d" "$spacevimd"
-  else
-    echo "$spacevimd already exists"
-  fi
+function install_ideavimrc() {
+  create_symlink "$PWD/.ideavimrc" "$HOME/.ideavimrc"
 }
 
 install_fish
 install_git
 install_spacevim
+install_ideavimrc

@@ -1,0 +1,32 @@
+" **************************************
+" * IDEA Which-Key
+" **************************************
+set which-key
+
+" **************************************
+" * Intellimacs
+" **************************************
+source ~/.intellimacs/spacemacs.vim
+
+" Enable other Intellimacs modules
+"source ~/.intellimacs/extra.vim
+"source ~/.intellimacs/major.vim
+"source ~/.intellimacs/hybrid.vim
+
+" Enable which-key plugin
+source ~/.intellimacs/which-key.vim
+
+" **************************************
+" * My Own Settings
+" **************************************
+" spacemacs style mode change
+imap fd <Esc>
+vmap fd <Esc>
+nmap fd <Esc>
+
+set noerrorbells
+set visualbell
+
+set showmode
+set nowrap
+set ignorecase
