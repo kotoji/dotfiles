@@ -1,6 +1,7 @@
 " setting
 " use UTF-8 character set
-set fenc=utf-8
+set encoding=utf-8
+set fileencoding=utf-8
 " do Not create backup files
 set nobackup
 " do Not create swap files
@@ -19,7 +20,8 @@ inoremap fd <Esc>
 vnoremap fd <Esc>
 nnoremap fd <Esc>
 map <leader>fs :w!<cr>
-map <leader>qq :q!<cr>
+map <leader>qq :q<cr>
+map <leader>q! :q!<cr>
 
 
 " view
