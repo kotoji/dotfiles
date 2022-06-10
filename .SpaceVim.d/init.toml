@@ -8,33 +8,60 @@
 
 # All SpaceVim option below [option] section
 [options]
-    bootstrap_before = "init#before"
-    bootstrap_after = "init#after"
-    # set spacevim theme. by default colorscheme layer is not loaded,
-    # if you want to use more colorscheme, please load the colorscheme
-    # layer
-    colorscheme = "SpaceVim"
-    colorscheme_bg = "dark"
-    # Disable guicolors in basic mode, many terminal do not support 24bit
-    # true colors
-    enable_guicolors = true
-    # Disable statusline separator, if you want to use other value, please
-    # install nerd fonts
-    statusline_separator = "arrow"
-    statusline_iseparator = "bar"
-    buffer_index_type = 4
-    windows_index_type = 3
-    enable_tabline_filetype_icon = true
-    enable_statusline_mode = true
-    statusline_unicode = true
+  force_global_config = true
 
-# Enable autocomplete layer
+  bootstrap_before = "init#before"
+  bootstrap_after = "init#after"
+
+  colorscheme = "nord"
+  colorscheme_bg = "dark"
+  enable_guicolors = true
+
+  statusline_separator = "arrow"
+  statusline_iseparator = "bar"
+  buffer_index_type = 4
+  windows_index_type = 3
+  enable_tabline_filetype_icon = true
+  enable_statusline_mode = true
+  statusline_unicode = true
+  
+  # nerdtree
+  filetree_direction = "left"
+
+  autocomplete_method = "coc"
+
+[[custom_plugins]]
+  repo = "kotoji/nord-vim"
+  merged = false
+
+# Disabled for coc
 [[layers]]
-name = 'autocomplete'
-auto_completion_return_key_behavior = "complete"
-auto_completion_tab_key_behavior = "cycle"
+  name = 'autocomplete'
+  auto_completion_return_key_behavior = "complete"
+  auto_completion_tab_key_behavior = "cycle"
+  enable = false
+
+[[custom_plugins]]
+  name = 'neoclide/coc.nvim'
+  merged = 0
+
+[[custom_plugins]]
+  name = 'SirVer/ultisnips'
+  merged = 0
 
 [[layers]]
-name = 'shell'
-default_position = 'top'
-default_height = 30
+  name = 'shell'
+  default_position = 'top'
+  default_height = 30
+
+[[layers]]
+  name = 'lang#scala'
+  enable = false
+
+[[custom_plugins]]
+  name = 'derekwyatt/vim-scala'
+  merged = 0
+
+[[layers]]
+  name = 'lang#rust'
+

@@ -8,7 +8,7 @@ alias ...='../..'
 alias ....='../../..'
 
 # vim
-alias vi='vim'
+alias vi=(which vim)
 # neovim
 alias vim='nvim'
 
