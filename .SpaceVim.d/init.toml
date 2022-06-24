@@ -65,3 +65,7 @@
 [[layers]]
   name = 'lang#rust'
 
+[[layers]]
+  name = "lang#clojure"
+  clojure_interpreter = "lein repl"
+
