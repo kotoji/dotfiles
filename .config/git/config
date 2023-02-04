@@ -19,7 +19,7 @@
   process = git-lfs filter-process
   required = true
 [alias]
-  push-f = push --force-if-includes
+  push-f = push --force-with-lease --force-if-includes
   graph = log --oneline --graph
   graph-b = log --graph --simplify-by-decoration --pretty=format:'%d' --all
   log-s = log --pretty='format:%h %s'
