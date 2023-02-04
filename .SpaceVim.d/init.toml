@@ -77,3 +77,8 @@
   name = "lang#clojure"
   clojure_interpreter = "lein repl"
 
+[[layers]]
+  # self made layer
+  name= "lang#hcl"
+  terraform_fmt_on_save = true
+
