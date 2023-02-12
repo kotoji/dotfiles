@@ -1,5 +1,6 @@
 # fish
 /.config/fish/conf.d/env.fish
+/.config/fish/fish_variables
 
 # git
 /.config/git/config.user
