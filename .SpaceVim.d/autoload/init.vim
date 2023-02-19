@@ -16,7 +16,8 @@ function! s:coc_config() abort
   " Extensions that will be installed automatically if not exist 
   let g:coc_global_extensions = [
     \'coc-highlight',
-    \'coc-metals', 
+    \'coc-rust-analyzer',
+    \'coc-go',
   \]
 
   " Remap for do action format

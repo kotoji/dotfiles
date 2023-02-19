@@ -34,12 +34,10 @@
   repo = "kotoji/nord-vim"
   merged = false
 
-# Disabled for coc
 [[layers]]
   name = 'autocomplete'
   auto_completion_return_key_behavior = "complete"
   auto_completion_tab_key_behavior = "cycle"
-  enable = false
 
 [[custom_plugins]]
   name = 'neoclide/coc.nvim'
@@ -59,15 +57,18 @@
   default_height = 30
 
 [[layers]]
+  # self customized layer
+  # TODO: ちゃんと動くようにする
+  #   とりあえず ↓ の人の設定を丸パクリしている (vim-metals のところだけ)
+  #   https://creators-note.chatwork.com/entry/2022/03/28/083000
+  #   現状 metals は立ち上がっているし vim.lsp.buf.definition() あたりはコマンドで呼べているがそれ以外のこと (補完とか色々) ができていない
+  #   やっぱり nvim-lspconfig も必要なのだろうか (まだためしていない)
   name = 'lang#scala'
-  enable = false
-
-[[custom_plugins]]
-  name = 'derekwyatt/vim-scala'
-  merged = 0
 
 [[layers]]
+  # self customized layer
   name = 'lang#rust'
+  format_on_save = true
 
 [[layers]]
   name = 'lang#go'
