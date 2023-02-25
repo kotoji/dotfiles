@@ -35,6 +35,11 @@
   merged = false
 
 [[layers]]
+  # NOTE: このレイヤーのせいで起動時にエラーが表示されるが今のところ動作に問題はないのでスルーしている
+  name = 'lsp'
+  enabled_clients = ['metals']
+
+[[layers]]
   name = 'autocomplete'
   auto_completion_return_key_behavior = "complete"
   auto_completion_tab_key_behavior = "cycle"
@@ -58,11 +63,9 @@
 
 [[layers]]
   # self customized layer
-  # TODO: ちゃんと動くようにする
+  # TODO: キーマップをちゃんと設定する
   #   とりあえず ↓ の人の設定を丸パクリしている (vim-metals のところだけ)
   #   https://creators-note.chatwork.com/entry/2022/03/28/083000
-  #   現状 metals は立ち上がっているし vim.lsp.buf.definition() あたりはコマンドで呼べているがそれ以外のこと (補完とか色々) ができていない
-  #   やっぱり nvim-lspconfig も必要なのだろうか (まだためしていない)
   name = 'lang#scala'
 
 [[layers]]
