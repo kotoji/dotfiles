@@ -5,7 +5,7 @@ alias ll='ls -lgh'
 alias lla='ls -algh'
 alias lt='ls -tree'
 alias ...='../..'
-alias ....='../../..'
+alias cat='bat --theme=Nord --style=plain'
 
 # vim
 alias vi=(which vim)
