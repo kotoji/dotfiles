@@ -46,8 +46,14 @@ function install_vimrc() {
   create_symlink "$PWD/.vimrc" "$HOME/.vimrc"
 }
 
+function install_tmux_conf() {
+  create_symlink "$PWD/.tmux.conf" "$HOME/.tmux.conf"
+  create_symlink "$PWD/.config/powerline" "$HOME/.config/powerline"
+}
+
 install_fish
 install_git
 install_spacevim
 install_ideavimrc
 install_vimrc
+install_tmux_conf
