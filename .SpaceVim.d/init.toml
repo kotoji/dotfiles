@@ -28,7 +28,7 @@
   # nerdtree
   filetree_direction = "left"
 
-  autocomplete_method = "coc"
+  autocomplete_method = "deoplete"
 
 [[custom_plugins]]
   repo = "kotoji/nord-vim"
