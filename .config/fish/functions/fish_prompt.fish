@@ -15,7 +15,9 @@ function fish_prompt
     end
   end
 
-  # Setup coors
+  # Setup colors
+  set -l normal (set_color normal)
+  set -l bold  (set_color -o)
   set -l nord0 (set_color 2E3440) # polar night
   set -l nord1 (set_color 3B4252) # polar night (brighter)
   set -l nord2 (set_color 434C5E) # polar night (more brighter)
@@ -49,12 +51,10 @@ function fish_prompt
   ##
   ## Line 1
   ##
-  #  echo -n $hostcolor'╭─'$hotpink$current_user$white' at '$orange$__fish_prompt_hostname$white' in '$limegreen(pwd|sed "s=$HOME=⌁=")$turquoise
-  #__fish_git_prompt " (%s)"
-  #echo
   set -l exit_code $status
   set -l cmd_duration $CMD_DURATION
-  echo -n $nord3'┌─╼['$nord8$current_user'@'$__fish_prompt_hostname$nord3']╾─╼['
+  [ -n "$SSH_CLIENT" ]; and set -l remote $nord3'['$bold$nord14'remote'$normal$nord3']'
+  echo -n $nord3'┌─╼'$remote'['$nord8$current_user'@'$__fish_prompt_hostname$nord3']╾─╼['
   if test $exit_code -ne 0
     echo -n $nord12
   else
@@ -68,7 +68,7 @@ function fish_prompt
     echo -n $nord8
   end
   printf '%s' (__print_duration $cmd_duration)
-  echo -n $nord3']╾─╼['$nord8(date +%H:%M:%S)$nord3']'
+  echo -n $nord3']╾─╼['$nord8(date -u +%H:%M:%S)$nord3']'
   echo
 
   ##
