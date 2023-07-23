@@ -1,7 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export EDITOR:nvim
-SETUVAR __fish_initialized:3400
+SETUVAR __fish_initialized:3100
 SETUVAR _fisher_oh_2D_my_2D_fish_2F_plugin_2D_peco_files:/Users/kotoji/\x2econfig/fish/functions/peco_kill\x2efish\x1e/Users/kotoji/\x2econfig/fish/functions/peco_select_history\x2efish
 SETUVAR _fisher_oh_2D_my_2D_fish_2F_theme_2D_bobthefish_files:/Users/kotoji/\x2econfig/fish/functions/__bobthefish_colors\x2efish\x1e/Users/kotoji/\x2econfig/fish/functions/__bobthefish_display_colors\x2efish\x1e/Users/kotoji/\x2econfig/fish/functions/__bobthefish_glyphs\x2efish\x1e/Users/kotoji/\x2econfig/fish/functions/bobthefish_display_colors\x2efish\x1e/Users/kotoji/\x2econfig/fish/functions/fish_greeting\x2efish\x1e/Users/kotoji/\x2econfig/fish/functions/fish_mode_prompt\x2efish\x1e/Users/kotoji/\x2econfig/fish/functions/fish_prompt\x2efish\x1e/Users/kotoji/\x2econfig/fish/functions/fish_right_prompt\x2efish\x1e/Users/kotoji/\x2econfig/fish/functions/fish_title\x2efish
 SETUVAR _fisher_plugins:oh\x2dmy\x2dfish/plugin\x2dpeco

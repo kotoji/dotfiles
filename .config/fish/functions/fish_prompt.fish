@@ -32,7 +32,7 @@ function fish_prompt
   set -l nord11 (set_color BF616A) # red
   set -l nord12 (set_color D08770) # deep orange
   set -l nord13 (set_color EBCB8B) # yellow
-  set -l nord14 (set_color A3BE8C) # light green
+  set -l nord14 (set_color aac98f) # original is A3BE8C # light green
   set -l nord15 (set_color B48EAD) # purple
 
   # Configure __fish_git_prompt
