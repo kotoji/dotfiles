@@ -53,7 +53,7 @@ function fish_prompt
   ##
   set -l exit_code $status
   set -l cmd_duration $CMD_DURATION
-  [ -n "$SSH_CLIENT" ]; and set -l remote $nord3'['$bold$nord14'remote'$normal$nord3']'
+  set -l remote '' ; [ -n "$SSH_CLIENT" ] ; and set -l remote $nord3'['$bold$nord14'remote'$normal$nord3']'
   echo -n $nord3'┌─╼'$remote'['$nord8$current_user'@'$__fish_prompt_hostname$nord3']╾─╼['
   if test $exit_code -ne 0
     echo -n $nord12
