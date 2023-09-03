@@ -61,12 +61,12 @@
   default_position = 'top'
   default_height = 30
 
-[[layers]]
+#[[layers]]
   # self customized layer
   # TODO: キーマップをちゃんと設定する
   #   とりあえず ↓ の人の設定を丸パクリしている (vim-metals のところだけ)
   #   https://creators-note.chatwork.com/entry/2022/03/28/083000
-  name = 'lang#scala'
+#  name = 'lang#scala'
 
 [[layers]]
   # self customized layer
