@@ -1,5 +1,5 @@
 # keybinds
-alias ls='exa'
+alias ls='eza'
 alias la='ls -a'
 alias ll='ls -lgh'
 alias lla='ls -algh'
