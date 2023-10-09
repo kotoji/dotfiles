@@ -9,9 +9,9 @@ function fish_prompt
     if not set -q __fish_prompt_char
         switch (id -u)
             case 0
-                set -g __fish_prompt_char '# '
+                set -g __fish_prompt_char '#'
             case '*'
-                set -g __fish_prompt_char '⋉> '
+                set -g __fish_prompt_char '⋉>'
         end
     end
 
