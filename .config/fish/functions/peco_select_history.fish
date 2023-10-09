@@ -17,7 +17,7 @@ function peco_select_history
     #  3. NUL 文字で区切った履歴をもとに戻す
     #  4. pecoる
     #  5. 結果を代入
-    history -z | string join '⏎' | string split0 | peco $peco_flags | read foo
+    history -z | string join '⏎ ' | string split0 | peco $peco_flags | read foo
 
     if [ $foo ]
         # エスケープした改行をもとに戻してコマンドラインへ渡す
