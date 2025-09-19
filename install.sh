@@ -53,7 +53,6 @@ function install_tmux_conf() {
 
 install_fish
 install_git
-install_spacevim
 install_ideavimrc
 install_vimrc
 install_tmux_conf
