@@ -6,6 +6,8 @@
 [core]
   ignorecase = false
   excludesfile = ~/.config/git/ignore
+  ;hooksPath = ~/.config/git/hooks
+  pager = delta
 [init]
   defaultBranch = main
 [pull]
@@ -13,6 +15,20 @@
   rebase = true
 [push]
   default = upstream
+[merge]
+  conflictstyle = diff3
+[diff]
+  colorMoved =default
+[color]
+  ui = true
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  navigate = true # use n and N to move between diff sections
+  light = false # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+  syntax-theme = Nord
+  side-by-side = false
+  keep-plus-minus-markers = false
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
@@ -23,7 +39,12 @@
   graph = log --oneline --graph
   graph-b = log --graph --simplify-by-decoration --pretty=format:'%d' --all
   log-s = log --pretty='format:%h %s'
+  todo = log -grep='TODO'
+  todo-s = todo --pretty='format:%C(yellow)%h %C(reset)%s'
   diff-w = diff --word-diff
   diff-f = diff --name-only
   diff-s = diff --cached
+  diff-remote = diff HEAD..@{upstream}
+  current = branch --show-current
   conflicts = diff --name-only --diff-filter=U
+  pclone = clone --filter=blob:none
